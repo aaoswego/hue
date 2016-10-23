@@ -1,0 +1,13 @@
+{% load static %}
+
+<link rel="stylesheet" type="text/css" href="{% static 'lights/style.css' %}" />
+
+{% if buttons %}
+    
+    {% for button in buttons %}
+        <button type="button">{{button.button_text}}</button><br>
+    {% endfor %}
+    
+{% else %}
+    <p>No buttons are available</p>
+{% endif %}
